@@ -20,19 +20,23 @@
     <h1>Student Registration Form</h1>  
     <div id = "SecondDiv"> 
         <form action="/submit" method="post">
+        {% csrf_token %}
             <h4 id="FN">First Name <input type="Text" name="First_Name"></h4>
-            <h4 id="MN">Middle Name <inputtype="Text" name="Middle_Name"></h4>
+            <h4 id="MN">Middle Name <input type="Text" name="Middle_Name"></h4>
             <h4 id="LN">Last Name <input type="Text" name="Last_Name"></h4>
             <h4 id="PN">Phone Number <input type="Text" name="Phone_Number"></h4>
             <h4 id="CN">College Name <input type="Text"name="College_Name"></h4>
             <h4 id="HA">Home Address <input type="Text" name="Home_Address"></h4>
             <h4 id="Gen">Gender Male <input type="radio"name="value"> Female <input name="value"type="radio"></h4>
-            <h4>Area Of IntrestProgramming <input type= "Checkbox">
+            <h4>Area Of Intrest 
+
+            Programming <input type= "Checkbox">
             Singing <input type= "checkbox">
             Dancing <input type= "checkbox">
             Studying <input type= "checkbox">
             Playing <input type= "checkbox">
             </h4>
+            <h1>{{msg}}</h1>
             <input type="Submit">
         </form>
     </div>>
